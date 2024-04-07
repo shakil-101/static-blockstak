@@ -28,7 +28,7 @@ const ContactForm: React.FC = () => {
       const response = await fetch("/", {
         method: "POST",
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: new URLSearchParams(formData).toString(),
+        body: new URLSearchParams(formData as any).toString(),
       });
       if (response.ok) {
         toast.success("Form submitted successfully!");
@@ -49,7 +49,7 @@ const ContactForm: React.FC = () => {
             Let’s Start a Conversation
           </h1>
 
-          <form onSubmit={handleSubmit} netlify>
+          <form onSubmit={handleSubmit}>
             <input type="hidden" name="form-name" value="contact-form" />
             <div className="grid lg:grid-cols-2 grid-cols-1 sm:gap-10 gap-6 sm:pb-10 pb-6">
               <div>
