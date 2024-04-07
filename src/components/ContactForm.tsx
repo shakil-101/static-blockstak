@@ -1,19 +1,28 @@
-import React, { useState } from "react";
+import React, { useState, ChangeEvent, FormEvent } from "react";
 import RightArrowSVG from "./SVG/RightArrowSVG";
 import { toast } from "react-toastify";
 
-const ContactForm = () => {
-  const [formData, setFormData] = useState({
+interface FormData {
+  name: string;
+  email: string;
+  message: string;
+}
+
+const ContactForm: React.FC = () => {
+  const [formData, setFormData] = useState<FormData>({
     name: "",
     email: "",
     message: "",
   });
 
-  const handleChange = (e) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
+  const handleChange = (
+    e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ): void => {
+    const { name, value } = e.target;
+    setFormData({ ...formData, [name]: value });
   };
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>): Promise<void> => {
     e.preventDefault();
     try {
       const response = await fetch("/", {
@@ -33,10 +42,10 @@ const ContactForm = () => {
   };
 
   return (
-    <div id="contact-us" className="lg:pt-28 lg:pb-16 py-10 ">
+    <div id="contact-us" className="lg:pt-28 lg:pb-16 py-10">
       <div className="container mx-auto">
         <div className="xl:px-[120px]">
-          <h1 className={`sm:text-[35px] text-lg font-medium lg:pb-16 pb-4`}>
+          <h1 className="sm:text-[35px] text-lg font-medium lg:pb-16 pb-4">
             Let’s Start a Conversation
           </h1>
 
@@ -81,12 +90,12 @@ const ContactForm = () => {
             <div className="sm:flex justify-center">
               <button
                 type="submit"
-                className="group sm:w-[210px] w-full bg-primaryLight  sm:py-4 py-2 flex items-center justify-center gap-4 rounded border duration-300  border-primaryLight hover:bg-primaryDark hover:border-primaryWhite"
+                className="group sm:w-[210px] w-full bg-primaryLight sm:py-4 py-2 flex items-center justify-center gap-4 rounded border duration-300 border-primaryLight hover:bg-primaryDark hover:border-primaryWhite"
               >
                 <span className="sm:text-xl text-lg sm:font-medium">
                   Submit
                 </span>
-                <div className="group-hover:translate-x-3  duration-300">
+                <div className="group-hover:translate-x-3 duration-300">
                   <RightArrowSVG
                     width="28px"
                     height="28px"
