@@ -15,10 +15,6 @@ import { useRouter } from "next/router";
 const Header = () => {
   const router = useRouter();
 
-  console.log({ router });
-  console.log(router.pathname);
-  console.log(router.query.id);
-
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   const [isOpened, setIsOpened] = useState(false);
