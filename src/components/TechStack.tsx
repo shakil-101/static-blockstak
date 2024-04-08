@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import WhiteShadow from "./SVG/WhiteShadowSVG";
 import HtmlSVG from "./SVG/HtmlSVG";

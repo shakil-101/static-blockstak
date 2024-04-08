@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 import { Inter, Poppins } from "next/font/google";
 import Header from "@/components/Header";
