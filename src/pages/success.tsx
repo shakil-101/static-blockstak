@@ -24,18 +24,17 @@ const Success = () => {
         <Lottie
           className={`${
             hideLottie ? "hidden" : "block"
-          } absolute top-0 left-0 w-full h-screen`}
+          } absolute xs:top-0 -top-24 left-0 w-full h-screen`}
           animationData={Sparkles}
           loop={false}
           onComplete={handleAnimationComplete}
         />
-        <div className="max-w-[755px] h-fit bg-[#2E2E2E] lg:p-[60px] p-10 rounded-lg ">
-          <h1 className="lg:text-[32px] text-2xl font-medium mb-6 ">
-            Thank you for applying to this position!
+        <div className="max-w-[655px] h-fit bg-[#2E2E2E] lg:p-[40px] p-8 rounded-lg ">
+          <h1 className="lg:text-[28px] text-xl font-medium mb-6 text-center">
+            Thank you!
           </h1>
-          <p className="lg:text-2xl text-lg mb-6 ">
-            We have successfully received your application. <br /> We will get
-            back to you as soon as possible!
+          <p className="lg:text-xl mb-6 text-center">
+            Your form submission has been received
           </p>
           <div>
             <Link href={`/`}>

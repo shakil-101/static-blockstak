@@ -32,24 +32,26 @@ const Footer = () => {
 
               <div className="flex items-center lg:justify-end justify-center gap-5">
                 <div className=" hover:scale-125 duration-200">
-                  <Link href={`/`}>
+                  <Link
+                    href={`https://www.facebook.com/blockstak?mibextid=ZbWKwL`}
+                  >
                     <FacebookSVG />
                   </Link>
                 </div>
 
                 <div className=" hover:scale-125 duration-200">
-                  <Link href={`/`}>
+                  <Link href={`https://www.linkedin.com/company/blockstak/`}>
                     <LinkedinSVG />
                   </Link>
                 </div>
 
-                <div className=" hover:scale-125 duration-200">
+                {/* <div className=" hover:scale-125 duration-200">
                   <Link href={`/`}>
                     <MessengerSVG />
                   </Link>
-                </div>
+                </div> */}
 
-                <div className=" hover:scale-125 duration-200">
+                <div className="hover:scale-125 duration-200">
                   <Link href={`/`}>
                     <GithubSVG />
                   </Link>

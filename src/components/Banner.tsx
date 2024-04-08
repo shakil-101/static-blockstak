@@ -102,9 +102,9 @@ const Banner = () => {
                 <ArrowButton buttonText="Get in touch" />
               </Link>
             </div>
-            <Link href={`/`} className="lg:hidden">
+            <Link href={`#contact-us`} className="lg:hidden">
               <button className="group rounded-full flex items-center gap-2 bg-primaryLight hover:bg-primaryDark duration-300 px-3 py-1.5 border border-primaryDark hover:border-primaryWhite">
-                <p className="text-sm">Learn more</p>
+                <p className="text-sm">Get in touch</p>
                 <div className="w-fit group-hover:translate-x-2 duration-300">
                   <RightArrowSVG
                     width="24px"

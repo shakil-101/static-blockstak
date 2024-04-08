@@ -21,11 +21,11 @@ const raleway = Raleway({
 
 const TechStack = () => {
   return (
-    <div className="sm:pb-20 pb-5">
+    <div className="pt-10 sm:pb-20 pb-10">
       <div className="container mx-auto">
         <div className="border-t border-[#9CA3AF] relative techstack-white-bg ">
           <h1
-            className={` max-w-[500px] mx-auto sm:text-2xl text-sm text-[#F4F4F4] text-center sm:py-[50px] py-5 ${raleway.className}`}
+            className={` max-w-[500px] mx-auto sm:text-2xl text-base text-[#F4F4F4] text-center sm:py-[50px] py-5 ${raleway.className}`}
           >
             We produce state of the art technology with our unique technology
             stack

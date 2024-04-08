@@ -140,12 +140,12 @@ const IntroductionSlider = () => {
 
                     <div className="lg:col-span-6 col-span-12 lg:order-1 order-2">
                       <h1
-                        className={`lg:text-[30px] text-base md:font-bold font-medium lg:pb-7 pb-3 leading-9`}
+                        className={`lg:text-[30px] text-lg md:font-bold font-semibold lg:pb-7 pb-3 leading-9`}
                       >
                         {item.title}
                       </h1>
                       <p
-                        className={`lg:text-2xl text-[12px] md:font-medium font-regular`}
+                        className={`lg:text-2xl text-base md:font-medium font-regular`}
                       >
                         {item.shortDescription}
                       </p>
